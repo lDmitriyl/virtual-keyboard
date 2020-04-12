@@ -236,29 +236,32 @@ function del() {
     TEXTAREA.setRangeText('', TEXTAREA.selectionStart, TEXTAREA.selectionEnd);
   }
 }
+
 function arrowLeft() {
-  TEXTAREA.focus();
   TEXTAREA.setSelectionRange(TEXTAREA.selectionStart - 1, TEXTAREA.selectionEnd - 1);
 }
+
 function arrowRight() {
-  TEXTAREA.focus();
   TEXTAREA.setSelectionRange(TEXTAREA.selectionStart + 1, TEXTAREA.selectionEnd + 1);
 }
+
 function arrowDown() {
-  TEXTAREA.focus();
   const len = TEXTAREA.value.length;
   TEXTAREA.setSelectionRange(len, len);
 }
+
 function arrowUp() {
-  TEXTAREA.focus();
   TEXTAREA.setSelectionRange(0, 0);
 }
+
 function tab() {
   insertTextCursor('    ');
 }
+
 function space() {
   insertTextCursor(' ');
 }
+
 function enter() {
   insertTextCursor('\n');
 }
@@ -312,6 +315,7 @@ function addContent(target) {
 
 function keyClick() {
   addContent(event.currentTarget);
+  TEXTAREA.focus();
 }
 
 document.addEventListener('keyup', () => {
@@ -324,6 +328,7 @@ document.addEventListener('keydown', (event) => {
     if (button.classList[1] === event.code) {
       button.classList.add('active');
       addContent(button);
+      TEXTAREA.focus();
     }
   });
 });
