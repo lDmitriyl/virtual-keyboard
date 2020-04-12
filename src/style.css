@@ -1,0 +1,142 @@
+* {
+    font-family: "Montserrat", "Helvetica", sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background-color:#187ee7 ;
+}
+
+.keyboard, textarea  {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+}
+
+textarea {
+    background-color:#e2e9eb;
+    color: black;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 20px auto;
+}
+
+.keyboard {
+    background-color: #f6f2f3;
+    box-shadow: 0 0 10px rgba(20, 21, 12, 0.8);
+    border-radius: 5px;    
+    width: 70%;
+}
+
+.keyboard__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.keyboard__key { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 6%;
+    min-width: fit-content;
+    border-radius: 5px;
+    background-color: #293139;
+    color: #fff;    
+    margin: 0.5vw;   
+    outline: none;
+    position: relative;
+}
+.keyboard__desc{
+    text-align: center;
+    color: white;
+    padding-top: 20px;  
+}
+.keyboard__key:hover{
+    box-shadow: 0 0 10px rgba(196, 241, 241, 0.8);
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 10px;
+}
+
+.keyboard__key:active, .keyboard__key.active{
+    background-color: rgb(28, 117, 38);
+    box-shadow: 0 0 15px rgba(0, 0, 0);
+    color: black;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+.functional_keys {
+    background-color:#15171a;
+    font-size: 12px;
+}
+
+.Backspace {
+    width: fit-content;
+    font-size: 0.5rem;
+}
+
+.Tab {
+    width: 50px;
+}
+
+
+.Enter {
+    width: 80px;
+}
+
+.Shift {
+    width: 10%;
+}
+
+.Shift {
+    width: 44px;
+}
+
+.Space {
+    width: 40%;
+}
+
+.Control {
+    width: 50px;
+}
+
+.Language {
+    background-color: transparent;
+    width: fit-content;
+}
+
+.Language:hover {
+    cursor: pointer;   
+}
+
+.CapsLock::after {
+    content: '';
+    border-radius: 50%;
+    background-color: teal;
+    width: 5px;
+    height: 5px;
+    top: 5px;
+    right: 10px;
+    position: absolute;
+}
+
+.CapsLock-active::after {
+    background-color: rgb(20, 238, 20);
+}
+.key{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Shift-active{
+    background-color: aqua;
+}
+div .Language{
+    background-color: cornflowerblue;
+}
